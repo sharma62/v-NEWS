@@ -11,7 +11,6 @@ const Home = () => {
                 </div>
             <button type="button" name="" id="" class="btn btn-primary" btn-lg >Next</button>
             </div>
-
         </>
     );
 }
