@@ -1,9 +1,10 @@
-import Home from './components/Home'
+import Greet from './components/Greet'
 
 function App() {
   return (
-    <Home />
-    
+    <Greet />
+
+           
   );
 }
 
