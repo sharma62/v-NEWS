@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-
-export class Home extends Component {
+import '../App.css';
+  
+ class Home extends Component {
   render() {
     return (
-      <div>
-           home page 
-      </div>
-    )
+      <p>nav</p>
+     )
   }
 }
 

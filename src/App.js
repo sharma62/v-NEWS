@@ -1,10 +1,20 @@
-import Greet from './components/Greet'
+import { useEffect, useState } from 'react';
+import Greet from './components/Greet';
+import Home from './components/Home';
 
 function App() {
-  return (
-    <Greet />
+  const [showComponent, setComponent] = useState( <Greet /> );
+  useEffect(()=>{
+        setInterval(() => {
+                setComponent(<Home/>);
+        }, 5000);
 
-           
+  },[]);
+
+  return (
+    
+    showComponent 
+    
   );
 }
 

@@ -1,7 +1,7 @@
 import logo from '../logo.svg';
 import '../App.css';
 
-const Home = () => {
+const Greet = () => {
     return (
         <>
             <div className="App">
@@ -13,4 +13,4 @@ const Home = () => {
         </>
     );
 }
-export default Home
+export default Greet
