@@ -1,0 +1,39 @@
+.Nav {
+    background-color:#282c34; ;
+   }
+   
+   .Nav-logo {
+     height: 10vmin;
+     pointer-events: none;
+   }
+   
+   @media (prefers-reduced-motion: no-preference) {
+     .Nav-logo {
+       animation: App-logo-spin infinite 1s linear;
+     }
+   }
+   
+   .Nav-header {
+     background-color: #282c34;
+     min-height: 89.5vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     font-size: calc(100px + 2vmin);
+     color: rgb(128, 173, 210);
+   }
+   
+   .Nav-link {
+     color: #61dafb;
+   }
+   
+   @keyframes App-logo-spin {
+     from {
+       transform: rotate(0deg);
+     }
+     to {
+       transform: rotate(360deg);
+     }
+   }
+   
