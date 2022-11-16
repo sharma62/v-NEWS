@@ -13,7 +13,10 @@ function App() {
 
   return (
     
-    showComponent 
+    showComponent // landing page after greeting page
+    
+    
+
     
   );
 }

@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import '../App.css';
-  
- class Home extends Component {
+import News from './body/News';
+import Navbar from './nav/Navbar'
+
+
+
+export default class Home extends Component {
   render() {
     return (
-      <p>nav</p>
-     )
+      <>
+            <Navbar title = 'V_news'/>
+            <hr />
+            <News/>
+
+      </>
+    )
   }
 }
 
-export default Home
+
