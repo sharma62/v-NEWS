@@ -7,7 +7,7 @@ function App() {
   useEffect(()=>{
         setInterval(() => {
                 setComponent(<Home/>);
-        }, 5000);
+        }, 2500);
 
   },[]);
 

@@ -9,9 +9,13 @@ export default class Home extends Component {
   render() {
     return (
       <>
+      {/* Navigation Bar Area */}
             <Navbar title = 'V_news'/>
             <hr />
-            <News/>
+      {/*Body Area */}
+            <News/> 
+
+      {/*Footer Area */}
 
       </>
     )
