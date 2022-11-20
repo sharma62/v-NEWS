@@ -10,7 +10,7 @@ export default class NewsItem extends Component {
                
 
 
-                        <div className="col-md-4">
+                        <div className="col-md-4" >
                             <div className="card h-100" style={{ width: "18rem" }}>
                                 <img src={urlToImage} className="card-img-top" alt="..." />
                                 <div className="card-body">
@@ -19,7 +19,7 @@ export default class NewsItem extends Component {
                                         <i className="card-subtitle mt-2 text-muted">Author :- '{author}'</i>
                                         <i className="card-subtitle mt-2 text-muted">Date :- '{publishedAt}'</i>
                                     </div>
-                                        <p className="card-text  visually-hidden-focusable">{goDiscription}</p>
+                                        <p className="card-text ">{goDiscription.slice(0,59)}</p>
                                     <a href={url} className="btn btn-primary ">Read</a>
                                 </div>
                             </div>

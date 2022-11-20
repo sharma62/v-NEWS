@@ -97,25 +97,6 @@ export default class News extends Component {
           "content": "Elon Musk reinstated Donald Trumps account on Twitter on Saturday, reversing a ban that has kept the former president off the social media site since a pro-Trump mob attacked the U.S. Capitol on Jan.… [+4971 chars]"
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       ]
 
     }
@@ -135,12 +116,13 @@ export default class News extends Component {
           publishedAt="2022-11-16T02:33:43Z"
           content="Brad Pitt was spotted hanging out with Ines de Ramon on Sunday night at a Bono concert in Los Angeles.\r\nThe pair reportedly arrived together at around 8 p.m. before meeting up with some of Pitt’s fam… [+2219 chars]"
         /> */}
-        <div className="container">
-          <div className="row">
+        <div className="container my-3">
+          <div className="row my-3">
             {
               this.state.articles.map((ele) => {
                 // console.log(ele.author,ele.title)
                 return (<NewsItem
+                  key={ele.url} // url is unique for every article/news item so thats why it should be key .
                   author={ele.author}
                   title={ele.title}
                   goDiscription={ele.description}
