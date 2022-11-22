@@ -10,7 +10,7 @@ export default class News extends Component {
     }
   }
   async componentDidMount() { //The keyword async before a function makes the function return a promise
-    let url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=152d1cd2f0384fb5b1923675a07d0760" // Api url where we get the data 
+    let url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=152d1cd2f0384fb5b1923675a07d0760" // Api url where we get the data 
     let data = await fetch(url) // fetch() function request data from Url and return it. 
     //  The await keyword can only be used inside an async function.
     // The await keyword makes the function pause the execution and wait for a resolved promise before it continues:
@@ -20,6 +20,11 @@ export default class News extends Component {
 
   }
 
+  
+  handleNextClick = () => { console.log("Next"); }
+  handlePrevClick = () => { console.log("previous"); }
+  
+
   render() {
 
     return (
@@ -27,7 +32,7 @@ export default class News extends Component {
 
 
         <div className="container my-3">
-          <h2 className=''>Tody's Highlights </h2>
+          <h2 className=''>Today's Highlights </h2>
           <div className="row my-3">
             {
               this.state.articles.map((ele) => {
@@ -46,9 +51,9 @@ export default class News extends Component {
             }
           </div>
           <div className="contaienr d-flex justify-content-between">
-             <button className='btn btn-primary'> &larr; previous</button>
-             <button className='btn btn-primary'>Next &rarr;</button>
-           </div>
+            <button className='btn btn-primary' onClick={this.handlePrevClick}  > &larr; previous</button>
+            <button className='btn btn-primary' onClick={this.handleNextClick}  >Next &rarr;</button>
+          </div>
         </div>
       </>
     )

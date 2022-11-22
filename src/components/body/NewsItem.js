@@ -24,7 +24,7 @@ export default class NewsItem extends Component {
                         </div>
                     </div>
                 </div>
-                    
+
             </>
         )
     }
