@@ -16,7 +16,7 @@ export default class News extends Component {
     // The await keyword makes the function pause the execution and wait for a resolved promise before it continues:
     let jsonData = await data.json() //  return data in json formate  
     console.log(jsonData)
-    this.setState({articles: jsonData.articles })
+    this.setState({ articles: jsonData.articles })
 
   }
 
@@ -30,11 +30,11 @@ export default class News extends Component {
           <h2 className=''>Tody's Highlights </h2>
           <div className="row my-3">
             {
-               this.state.articles.map((ele) => {
-                console.log(ele )
+              this.state.articles.map((ele) => {
+                console.log(ele)
                 return (<NewsItem
                   author={ele.author}
-                  content= {ele.content}
+                  content={ele.content}
                   description={ele.description}
                   publishedAt={ele.publishedAt}
                   title={ele.title}
@@ -42,9 +42,13 @@ export default class News extends Component {
                   url={ele.url}
                   urlToImage={ele.urlToImage}
                 />)
-              }) 
+              })
             }
           </div>
+          <div className="contaienr d-flex justify-content-between">
+             <button className='btn btn-primary'> &larr; previous</button>
+             <button className='btn btn-primary'>Next &rarr;</button>
+           </div>
         </div>
       </>
     )
