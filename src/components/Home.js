@@ -14,7 +14,6 @@ export default class Home extends Component {
         <hr />
         {/*Body Area */}
         <News />
--+9
         {/*Footer Area */}
 
       </>
