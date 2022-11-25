@@ -5,9 +5,9 @@ import Home from './components/Home';
 function App() {
   const [showComponent, setComponent] = useState( <Greet /> );
   useEffect(()=>{
-        setInterval(() => {
+        setTimeout(() => {
                 setComponent(<Home/>);
-        }, 2500);
+        },  2500);
 
   },[]);
 
