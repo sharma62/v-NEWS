@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import "../../App.css";
 import logo from "../../logo.svg";  
 export default class Navbar extends Component {
-    render(props) {
+    render() {
         return (
             <>
                 <div className="container-fluid">
@@ -69,7 +69,7 @@ export default class Navbar extends Component {
                                     <li className="nav-item active"><a href="/" className="nav-link">Home</a></li>
                                     <li className="nav-item"><a href="/" className="nav-link">Services</a></li>
                                     <li className="nav-item"><a href="/" className="nav-link">About</a></li>
-                                    <li className="nav-item"><a href="/" className="nav-link">Contacts</a></li>
+                                    <li className="nav-item"><a href="/" className="nav-link">India</a></li>
                                 </ul>
                             </nav>
                         </div>

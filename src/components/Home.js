@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import '../App.css';
 import News from './body/News';
 import Navbar from './nav/Navbar'
-import {Zoom} from 'react-reveal/Zoom'
-
+ 
 
 
 export default class Home extends Component {
