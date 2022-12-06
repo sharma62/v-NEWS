@@ -3,16 +3,23 @@ import NewsItem from "./NewsItem"
 
 
 export default class News extends Component {
+  
+  
+  static defaultProps = {  
+    country:'in'
+  }
+  
   constructor() {
     super();
     this.state = {
       articles: [],
       loading: false,
       page: 1,
-    }
-  }
+      }
+   }
+
   async componentDidMount() { //The keyword async before a function makes the function return a promise
-    let url = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=152d1cd2f0384fb5b1923675a07d0760&page=1 `// Api url where we get the data 
+    let url = `https://newsapi.org/v2/top-headlines?${this.props.country}&category=business&apiKey=152d1cd2f0384fb5b1923675a07d0760&page=1 `// Api url where we get the data 
     let data = await fetch(url) // fetch() function request data from Url and return it. 
     //  The await keyword can only be used inside an async function.
     // The await keyword makes the function pause the execution and wait for a resolved promise before it continues:
@@ -21,12 +28,13 @@ export default class News extends Component {
     this.setState({
       articles: jsonData.articles,
       totalResults: jsonData.totalResults
+  
     })
   }
 
 
   handleNextClick = async () => {
-    console.log("previous");
+ 
     let url = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=152d1cd2f0384fb5b1923675a07d0760&page=${this.state.page + 1}`
     let data = await fetch(url)
     let jsonData = await data.json()
@@ -45,10 +53,6 @@ export default class News extends Component {
     })
 
     // test country data
- 
-
-
-
   }
 
 
@@ -65,7 +69,8 @@ export default class News extends Component {
 
             {
               this.state.articles.map((ele) => {
-                return (<NewsItem
+                return (
+                <NewsItem
                   author={ele.author}
                   content={ele.content}
                   description={ele.description}
@@ -74,7 +79,8 @@ export default class News extends Component {
                   key={ele.url} // url is unique for every article/news item so thats why it should be key .
                   url={ele.url}
                   urlToImage={ele.urlToImage}
-                />)
+                />
+                )
               })
             }
 

@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import { Zoom } from 'react-reveal'
 
 export default class NewsItem extends Component {
-    render(props) {
+    render() {
         let { title, author, description, url, urlToImage, publishedAt } = this.props
-        console.log(this.props)
-
         return (
             <>
 

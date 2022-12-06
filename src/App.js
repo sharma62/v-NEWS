@@ -15,9 +15,6 @@ function App() {
     
     showComponent // landing page after greeting page
     
-    
-
-    
   );
 }
 
