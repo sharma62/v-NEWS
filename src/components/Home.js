@@ -18,14 +18,10 @@ export default class Home extends Component {
           {/*Body Area */}
 
           <Routes>
-
-
-            <Route exact path='/us' element={<News country="us" />}> </Route>
-
-
-            <Route exact path='/india' element={<News country="in" />}> </Route>
-
-
+            <Route exact  path='/' element={<News key='home' country="in" />}> </Route>
+            <Route exact path='/us' element={<News key='us' country="us" />}> </Route>
+            <Route exact  path='/in' element={<News key='in' country="in" />}> </Route>
+            <Route exact  path='/ar' element={<News key='ar' country="ar" />}> </Route>
           </Routes>
 
           {/*Footer Area */}

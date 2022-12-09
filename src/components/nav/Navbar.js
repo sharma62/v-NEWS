@@ -3,10 +3,15 @@ import React, { Component } from 'react'
 import "../../App.css";
 import logo from "../../logo.svg";
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default class Navbar extends Component {
+
+    handleCountry = () => {
+
+    }
+
     render() {
         return (
             <>
@@ -70,19 +75,15 @@ export default class Navbar extends Component {
                             </button>
                             <nav className="collapse navbar-collapse " id="navbarCollapse5">
                                 <ul className="navbar-nav">
-                                    <li className="nav-item active"><Link to="/india" className="nav-link"> india   </Link></li>
-                                    <li className="nav-item "><Link to="/US" className="nav-link"> US   </Link></li>
-                                    {/* <li className="nav-item active"><a href="/" className="nav-link"> business   </a></li>
-                                    <li className="nav-item "><a href="/" className="nav-link"> entertainment    </a></li>
-                                    <li className="nav-item "><a href="/" className="nav-link"> general          </a></li>
-                                    <li className="nav-item "><a href="/" className="nav-link"> health           </a></li>
-                                    <li className="nav-item"><a href="/" className="nav-link">  science             </a></li>
-                                    <li className="nav-item"><a href="/" className="nav-link">  sports           </a></li>
-                                    <li className="nav-item"><a href="/" className="nav-link">  technology       </a></li> */}
+                                    <li className="nav-item active"><Link to="/in" className="nav-link"  > India   </Link></li>
+                                    <li className="nav-item "><Link to="/us" className="nav-link" onClick={this.handleCountry}> USA  </Link></li>
+                                    <li className="nav-item "><Link to="/ar" className="nav-link" onClick={this.handleCountry}> AR  </Link></li>
+
                                 </ul>
                             </nav>
                         </div>
                     </header>
+                  
                 </div>
             </>
         )
